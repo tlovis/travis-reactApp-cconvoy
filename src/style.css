@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  color: #ffffff;
+}
+body {
+  background-color: #191b1b;
+  text-align: center;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.images .image {
+  width: 200px;
+  height: 200px;
+  justify-self: center;
+  align-self: center;
+  margin-left: 0rem;
+  border-radius: 2px;
+  transition: transform 0.5s;
+}
+
+.images .image:hover {
+  transform: translateY(-3px);
+}
