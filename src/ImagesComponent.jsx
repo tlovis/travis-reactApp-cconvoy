@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import fetchImages from "./fetchImages";
 
+// Using ReactQuery for data fetching and caching. Will run fetching function from separate component, return the data from API here and map images to be rendered.
 const ImagesComponent = () => {
   const { isLoading, isError, data, error } = useQuery({
     queryKey: ["images"],
@@ -14,6 +15,7 @@ const ImagesComponent = () => {
     return <h3>Error: {error.message}</h3>;
   }
 
+  // From return JSON data, uses "urls" to access url to image and "small" to use size most appropriate for this use case
   return (
     <div className="images">
       {data.map((image) => (

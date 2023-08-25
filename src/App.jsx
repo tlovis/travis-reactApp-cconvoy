@@ -2,6 +2,7 @@ import { createRoot } from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ImagesComponent from "./ImagesComponent";
 
+// Setting ReactQuery to cache and set fetched data as fresh until user manually requests new data to prevent unintentional auto refetch from API on window refocus
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
